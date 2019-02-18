@@ -1,0 +1,523 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8%; 
+}
+#square{
+    background: darkcyan;
+    height: 280px;
+    width: 300px; 
+    border-radius: 8px;
+    transition: transform 1.5s;
+}
+
+#square:hover{
+/*transform: rotate(50deg);*/
+/*transform: rotate(-50deg);*/
+transform: rotate(-360deg);
+}
+
+.skew{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10% auto;
+}
+.skew1, .skew2, .skew3{
+    background: deeppink;
+    width: 250px;
+    height: 250px;
+}
+.skew1:hover{
+  /*if not negative value it turn to left*/
+/*transform: skewX(10deg);*/
+/*if takes negative value it turn to right*/
+transform: skewX(-10deg);
+}
+
+.skew2:hover{
+    /*transform: skewY(20deg);*/ 
+   transform: skewY(-20deg); 
+}
+
+.skew3:hover{
+    
+    transform: skew(-25deg, 30deg);
+}
+
+
+.scale{
+    width: 300px;
+    height: 300px;
+    margin: 8% auto;
+    background: red;
+    transition: transform 1s;
+}
+
+.scale:hover{
+    /*transform: scale(1.2);*/
+    /*transform: scaleY(0.5);*/
+    /*transform: scaleY(1.2);*/
+    /*transform: scaleX(0.5);*/
+    transform: scaleX(1.2);
+}
+
+.circle-container{
+    margin-top: 8%;
+}
+.circle{
+    
+}
+.circle1{
+    background-color: blueviolet;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    transition: transform 0.5s;
+}
+.circle1:hover{
+    /*right*/
+    /*transform: translateX(20px);*****/
+    /*left*/
+    /*transform: translateX(-20px);*/
+
+    /*down
+    transform: translateY(20px);*/
+    /*top
+    transform: translateY(-20px);*/
+    
+    
+}
+
+.circle2{
+    background-color: rgb(226, 214, 43);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+}
+.circle2:hover{
+    transform: translate();
+}
+
+
+.circle3{
+    background-color: rgb(226, 43, 186);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+}
+.circle3:hover{
+    transform: translate();
+}
+
+
+.circle4{
+    background-color: rgb(226, 43, 43);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+}
+.circle4:hover{
+    transform: translate();
+}
+
+
+.circle5{
+    background-color: rgb(43, 226, 58);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+}
+.circle5:hover{
+    transform: translate();
+}
+
+
+
+
+
+
+
+
+
+
+/*buttons animation*/
+button{
+    width: 150px;
+    height: 80px;
+    background: #F50057;
+    border: none;
+    background-color: transparent;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+#one{
+    border: 3px solid #F50057;
+    transition-duration: .5s;
+}
+#one:hover{
+    background: #F50057;
+    color: aliceblue;
+}
+
+
+
+/*second button animation*/
+#two{
+position: relative;
+}
+
+#two::after{
+position: absolute;
+content: '';
+top: 0;
+left: 0;
+width: 0%;
+height: 2px;
+background: #F50057;
+transition-duration: 0.3s;
+}
+
+#two::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background: #F50057;
+    transition-duration: 0.3s;
+}
+
+#two:hover::after,
+#two:hover::before{
+  width: 100%;
+}
+
+
+
+/*button three animation*/
+#three{
+    position: relative;
+    transition: all 0.5s ease-out;
+}
+#three::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background: #F50057;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition:  0.5s ease-in-out;
+}
+#three:hover{
+    color: aliceblue;
+}
+#three:hover::after{
+    height: 100%;
+}
+
+
+
+/*button four animation*/
+#four{
+    position: relative;
+    transition-duration: 0.4s;
+}
+#four::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    background: #F50057;
+    top: 0;
+    right: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+#four::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    background: #F50057;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+#four:hover{
+    color: white;
+}
+#four:hover::after,
+#four:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*button five animation*/
+#five{
+    position: relative;
+    background-image: url("https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+#five::after{
+    content: '';
+    background: #F50057;
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    top: 20%;
+    left: 20%;
+    transition-duration: 0.3s;
+    
+}
+
+#five::before{
+    content: '';
+    background: #F50057;
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    bottom: 20%;
+    right: 20%;
+    transition-duration: 0.3s;
+    
+}
+#five-span::after{
+    content: '';
+    background: #F50057;
+    position: absolute;
+    width: 4px;
+    height: 0%;
+    top: 20%;
+    right: 20%;
+    transition-duration: 0.3s;
+}
+#five-span::before{
+    content: '';
+    background: #F50057;
+    position: absolute;
+    width: 4px;
+    height: 0%;
+    bottom: 20%;
+    left: 20%;
+    transition-duration: 0.3s;
+}
+#five:hover::after{
+    width: 60%;
+}
+#five:hover > #five-span::after{
+    height: 60vh;
+    transition-delay: 0.3s;
+}
+#five:hover > #five-span::before{
+    height: 60vh;
+    transition-delay: 0.4s;
+}
+#five:hover::before{
+    width: 60%;
+}
+
+
+
+/*button six animation*/
+
+#six{
+    position: relative;
+}
+#six::after{
+    content: '';
+    position: absolute;
+    background: #F50057;
+    width: 1%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    transition-duration:0.4s;
+    z-index: -1;
+}
+#six:hover{
+    color: aliceblue;
+}
+#six:hover::after{
+ width: 100%;
+}
+
+
+
+/*seven button animation*/
+#seven{
+    position: relative;
+    border: 2px solid #F50057;
+    transition-duration: 0.4s;
+}
+#seven::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0px 0px 0;
+    border-color: transparent #F50057 transparent transparent;
+    transition-duration: 0.4s;
+}
+#seven::before{ 
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: transparent transparent #F50057  transparent;
+    transition-duration: 0.4s;
+}
+#text{
+    transition-duration: 0.4s;
+}
+#seven:hover > #text{
+padding-right: 30px;
+}
+#seven:hover::after{
+    border-width: 0 40px 40px 0;
+}
+#seven:hover::before{
+    border-width: 0 0 40px 40px;
+ }
+
+
+
+
+ /*eight button animation*/
+
+ #eight{
+     position: relative;
+     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     transition-duration: 0.4s;
+ }
+ #eight::after{
+     content: '';
+     position: absolute;
+     background: #F50057;
+     width: 0%;
+     height: 0%;
+     top: 45%;
+     left: 45%;
+     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     transition-duration: 0.4s;
+     z-index: -1;
+     border-radius: 50%;
+ }
+
+ #eight:hover::after{
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     border-radius: 0px;
+ }
+ #eight:hover{
+     color: aliceblue;
+ }
+
+
+
+
+
+ /*spinner animation*/
+ #spinner1{
+     position: relative;
+     margin: 100px;
+ }
+
+ #rect{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100px;
+     height: 100px;
+     background: #F50057;
+     animation: turn 2s ease-in-out 0s infinite;
+ }
+
+ #rect2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: rgb(141, 56, 86);
+    animation: turn 2s ease-in-out 1s infinite;
+ }
+
+ @keyframes turn{
+     0%{
+         transform: rotate(0deg);
+     }
+     100%{
+         transform: rotate(300deg);
+     }
+ }
+
+
+
+
+ /*spinner2 animation*/
+ #spinner2{
+     margin-left: 400px;
+ }
+ .circle{
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     display: inline-block;
+     background: #F50057;
+ }
+ #circle1{
+     animation: ball 2s linear 0s infinite;
+ }
+@keyframes ball{
+    0%{
+        transform: translateY(-40px) translateX(-80px);
+
+    }
+    20%, 80%{
+       transform: translateY(0px) translateX(0px);
+    }
+    100%{
+        transform: translateY(-40px) translateX(-80px);
+    }
+}
